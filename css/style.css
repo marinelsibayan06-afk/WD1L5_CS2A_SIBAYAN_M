@@ -1,0 +1,260 @@
+/* Midnight Blue and Silver Theme */
+:root {
+  --bg: #101827;
+  --nav: #1c2b40;
+  --accent: #64b5f6;
+  --card: #b8d8f0;
+  --card-text: #14263d;
+  --soft: #e3edf7;
+  --soft-text: #263b50;
+  --link: #90caf9;
+}
+
+/* General body */
+body {
+  padding-top: 70px;
+  background: var(--bg);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h1 {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+h2 {
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 6px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Navigation bar */
+.navbar {
+  background: var(--nav);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #dceaf7 !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Links */
+main a:not(.btn) {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+main a:not(.btn):hover {
+  color: #ffffff;
+}
+
+/* Profile photo */
+img.photo {
+  display: block;
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  margin: 15px auto 14px;
+  box-shadow: 0 0 15px rgba(100, 181, 246, 0.4);
+}
+
+/* About section */
+#about p {
+  line-height: 1.7;
+}
+
+/* Design Philosophy */
+#philosophy,
+#contact {
+  text-align: center;
+}
+
+#philosophy .card {
+  background-color: var(--card);
+  color: var(--card-text);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  min-height: 170px;
+}
+
+#philosophy .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(100, 181, 246, 0.3);
+}
+
+#philosophy .card-title {
+  color: #14263d !important;
+}
+
+#philosophy .card-text {
+  color: var(--card-text);
+}
+
+/* Projects section */
+#projects {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+#projects .card {
+  background-color: var(--soft);
+  border: 1px solid var(--accent);
+  color: var(--soft-text);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(100, 181, 246, 0.25);
+}
+
+#projects .card-title {
+  color: #1c2b40;
+  font-weight: bold;
+}
+
+#projects .card-text {
+  color: var(--soft-text);
+}
+
+/* Project images */
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* Project card body */
+#projects .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 12px 0 0 0;
+  flex-grow: 1;
+}
+
+/* Project buttons */
+#projects .btn {
+  background-color: #1c2b40;
+  border: none;
+  color: #ffffff;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#projects .btn:hover {
+  background-color: #2874a6;
+  color: #ffffff;
+}
+
+/* Contact section */
+#contact {
+  padding-bottom: 30px;
+}
+
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  scroll-margin-top: 60px;
+  text-align: left;
+}
+
+#contactForm .form-label {
+  color: #ffffff;
+}
+
+#contactForm .form-control {
+  background-color: #e3edf7;
+  border: 1px solid var(--accent);
+  color: #14263d;
+  border-radius: 6px;
+}
+
+#contactForm .form-control:focus {
+  border-color: #90caf9;
+  box-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+}
+
+#contactForm button {
+  background-color: var(--accent);
+  color: #14263d;
+  border: none;
+  padding: 8px 25px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+#contactForm button:hover {
+  background-color: #90caf9;
+}
+
+/* Footer */
+footer {
+  background: #0a111d;
+  color: #ffffff;
+  border-top: 1px solid var(--accent) !important;
+  padding: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding-top: 65px;
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+
+  #about {
+    text-align: center;
+  }
+
+  #about .col-md-8 {
+    margin-top: 15px;
+  }
+
+  #philosophy .card {
+    min-height: 140px;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  #contactForm {
+    padding-top: 25px;
+  }
+}
